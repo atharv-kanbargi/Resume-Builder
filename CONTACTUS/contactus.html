@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContactUs</title>
+    <link rel="icon" type="image/x-icon" href="./Assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-------------------------------------nav-------------------------->
+
+    <nav class = "navbar bg-white" style="width: 100%;">
+      <div class="container1">
+          <div class = "navbar-content">
+              <div class = "brand-and-toggler">
+                  <a href = "../index.html" class = "navbar-brand">
+                      <img src = "./Assets/images/logo.png" alt = "" class = "navbar-brand-icon">
+                      <span class = "navbar-brand-text">ACE <span>RESUME.</span>
+                  </a>
+                  <div class="nav-items">
+                      <a href="../ABOUTUS/aboutus.html">ABOUT US</a>
+                      <a href="../CONTACTUS/contactus.html">CONTACT US</a>
+                      <a href="#">ARTICLES</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+    <!-------------------------------------form-------------------------->
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <p class="text">
+          We look forward to hearing from you and helping you in any way we can.
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="./Assets/images/location.png" class="icon" alt="" />
+            <p>Mulund East,Mumbai,400081</p>
+          </div>
+          <div class="information">
+            <img src="./Assets/images/email.png" class="icon" alt="" />
+            <p>build.resume@gmail.com</p>
+          </div>
+          <div class="information">
+            <img src="./Assets/images/phone.png" class="icon" alt=""/>
+            <p>9324098270</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+      <form action="https://formspree.io/f/mrbzdrkk" method="POST">
+          <input type="hidden" name="_url" value="https://yourdomain.co/contact.html">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" />
+            <label for="">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" />
+        </form>
+      </div>
+    </div>
+
+    <!-- <img src="/CONTACTUS/Contactus/img/shape.png" style="position: absolute;width: 400px;margin: 0px 0px 0px 0px;"> -->
+
+
+    <footer class = "footer bg-dark">
+      <div class="container1">
+          <div class = "footer-content text-center">
+              <p class="fs-15">&copy;Copyright 2022. All Rights Reserved - <span>ACERESUME.</span></p>
+          </div>
+      </div>
+  </footer>
+
+    <script src="./Assets/js/app.js"></script>
+
+  </body>
+</html>

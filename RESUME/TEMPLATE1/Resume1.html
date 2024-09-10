@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ASSETS/CSS/PAGE.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common.min.css" />
+    <title>RESUME</title>
+    <link rel="icon" type="image/x-icon" href="./ASSETS/IMAGES/logo.png">
+
+</head>
+<body>
+
+
+ 
+<!-- -------------PDF GENERATEOR --------------- -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.1.223/styles/kendo.common.min.css" />
+<script src="https://kendo.cdn.telerik.com/2017.1.223/js/jszip.min.js"></script>
+<script src="https://kendo.cdn.telerik.com/2017.1.223/js/kendo.all.min.js"></script>
+     
+     
+    <div id="example" style="width: fit-content;">
+    <div class="box wide hidden-on-narrow">
+    </div>
+    <input style="padding: 5px;background-color: red;" type="file" accept="image/jpeg,image/png,image/jpg " id="input-file" style="color:transparent" value="ADD PHOTU" hidden>
+
+    <div class="page-container hidden-on-narrow">
+        <div class="pdf-page size-a4">
+            
+            <page size="A4" style="margin: 0;display: flex;background-color: #f3f3f3;">
+               <div style="display: flex; flex-direction: column;height: max-content;">
+                <nav class = "navbar bg-white" style="width: 101.37%;">
+                    <div class="container1">
+                        <div class = "navbar-content">
+                            <div class = "brand-and-toggler">
+                                <a href = "../../index.html" class = "navbar-brand">
+                                    <img src = "./ASSETS/IMAGES/logo.png" alt = "" class = "navbar-brand-icon">
+                                    <span class = "navbar-brand-text" style="font-size: 20px;">ACE <span>RESUME.</span>
+                                </a>
+                                <div class="nav-items">
+                                    <a href="../../ABOUTUS/aboutus.html">ABOUT US</a>
+                                    <a href="../../CONTACTUS/contactus.html">CONTACT US</a>
+                                    <a href="#">ARTICLES</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                  <div class="super-main">
+
+                    <!------------------------------------------------------------- Toggle Buttons START---------------------------------------------------------->
+                                          
+                        <div class="toggle">
+                                                <div class="IMAGE">
+                                                    <h3>IMAGE</h3>
+                                                    <div class="tog-container">
+                                                        <div>
+                                                            <input type="checkbox" class="tglbtn" id="minus-one" checked onclick="isChecked()">
+                                                            <label for="minus-one" style="top: 14px;"></label>
+                                                        </div>
+
+                                                        <div class="input-file-photo">
+                                                            <button ><label for="input-file">ADD IMAGE</label></button>
+                                                            <input type="file" accept="image/jpeg,image/png,image/jpg " id="input-file" style="display: none;">
+                                                        </div>
+                                                
+                                                    </div>
+                                                </div>
+                                                <div class="ABOUT-ME">
+                                                    <h3>ABOUT ME</h3>
+                                                    <div class="tog-container">
+                                                        <input type="checkbox" class="tglbtn" id="zero" checked onclick="isChecked()">
+                                                        <label for="zero" style="top: -10px;"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="TECHNICAL-SKILLS" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>TECHNICAL SKILLS</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="one" checked onclick="isChecked()">
+                                                            <label for="one"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="SOFT-SKILLS" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>SOFT SKILLS</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="two" checked onclick="isChecked()">
+                                                            <label for="two"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="HOBBIES" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>HOBBIES</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="three" checked onclick="isChecked()">
+                                                            <label for="three"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="LANGUAGES" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>LANGUAGES</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="four" checked onclick="isChecked()">
+                                                            <label for="four"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="CERTIFICATIONS" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>CERTIFICATIONS</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="five" checked onclick="isChecked()">
+                                                            <label for="five"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="WORK-EXPERIENCE" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>WORK EXPERIENCE</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="six" checked onclick="isChecked()">
+                                                            <label for="six"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="PROJECTS" style="display: block;">
+                                                    
+                                                    <div style="display: flex;">
+                                                        <h3>PROJECTS</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="seven" checked onclick="isChecked()">
+                                                            <label for="seven"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="EDUCATION" style="display: block;">
+                                                    <div style="display: flex;">
+                                                        <h3>EDUCATION</h3>
+                                                        <div class="tog-container">
+                                                            <input type="checkbox" class="tglbtn" id="eight" checked onclick="isChecked()">
+                                                            <label for="eight"></label>
+                                                        </div>
+                                                    </div>
+                    
+                                                    <div>
+                                                        <button class="add">ADD</button>
+                                                        <button class="remove">REMOVE</button>
+                                                        <input value="1" type="text" class="index">
+                                                    </div>
+                                                </div>
+                                                <div class="color-pallete display-inputs" style="display: flex;align-items: center;">
+                                                    <h3>COLOR</h3>
+                                                    <input type="color" name="" id="" class="clr-picker" value="#3dd6a8">
+                                                </div>
+                            
+                                                <div class="font-style" style="display: flex;align-items: center;">
+                                                    <h3>FONT</h3>
+                                                    <select name="" id="font-style">
+                                                        <option value="Times New Roman">Times New Roman</option>
+                                                        <option value="Arial">Arial</option>
+                                                        <option value="Georgia">Georgia</option>
+                                                        <option value="sans-serif">Sans-serif</option>
+                                                    </select>
+                                                </div>
+                            
+                                                <div class="side_baar_links display-inputs" style="display: flex;flex-direction: column;">
+                                                    <h3>GITHUB & LINKEDIN</h3>
+                                                    <div>
+                                                        <input type="text" id="linkedin" placeholder="Paste Your Linkedin URL" style="background-color: #9dc9ed;border: 1px solid black;">
+                                                        <input type="text" id="github" placeholder="Paste Your Github URL" style="background-color: antiquewhite;border: 1px solid black;">
+                                                    </div>
+                    
+                                                  </div>
+                            
+                                                <div class="print">
+                                                    <button class="print" id="pdf-generate" style="width: 100%;"><i class="fa-solid fa-download"></i><div>DOWNLOAD</div></button>
+                                                </div>
+                        </div>
+                    <!------------------------------------------------------------- Toggle Buttons END ---------------------------------------------------------->
+
+                    <!-- ----------------------------------------------------------------RESUME PAGE START-------------------------------------------------->
+                        <div class="main_container">  
+                                        <div id="container" class="container">
+                                            <div id="header-1">
+                                                <div id="photo" class="tgl" >
+                                                     <img src="./ASSETS/IMAGES/profileimg.png" id="profilepic" style="transform: scale(1);">
+                                                </div>
+                                             
+                                                <div id="name-links">
+                                                     <div id="name">
+                                                       <h1 contenteditable="true" placeholder="Your Name">YOUR NAME</h1>
+                                                        <p contenteditable="true" placeholder="Your Role Or Profession">YOUR ROLE OR PROFESSION</p>
+                                                </div>
+                                     
+                                                     <div id="links">
+                                                         <div class="row 4">
+                                                             <a href="" contenteditable="true" placeholder="xyz@gmail.com">xyz@gmail.com</a>
+                                                             <a href="" contenteditable="true" placeholder="phonenumber ">9324098270</a>
+                                                         </div>
+                                     
+                                                         <div class="row 2">
+                                                             <a href="" id="linkedinhere" style="margin: 7px 1px 1px 0px;"><img src="./ASSETS/IMAGES/linkedin.png" style="width: 25px;height: 25px;"></a>
+                                                             <a href="" id="githubhere" style="margin: 0px 0px 0px -6px;"><img src="./ASSETS/IMAGES/github.png" style="width: 35px;height: 35px;"></a>
+                                                         </div>
+                                     
+                                                         <!-- <div class="row 3">
+                                                             
+                                                             <a href="www.google.com">GITHUB</a>
+                                                         </div> -->
+                                     
+                                                     </div>
+                                     
+                                                 </div> 
+                                     
+                                             </div>
+                                     
+                                             <div id="main">
+                                                 <div id="left">
+                                                     <div class="aboutme tgl">
+                                                           <p class="title" contenteditable="true">ABOUT ME</p>
+                                                           <p class="content" contenteditable="true" placeholder="Enter your professional summary. Provide a brief overview of your relevant skills, experience, and qualities that would make you a good candidate for the job. Make sure to keep it concise and focused. If you need help writing your professional summary, you can use the AI Writing Assistant."></p>
+                                                     </div>
+                                     
+                                                     <div class="skill tgl" id="TECHNICAL_SKILLS">
+                                    
+                            
+                                                         <p class="title" contenteditable="true" placeholder="TECHNICAL SKILLS">TECHNICAL SKILLS</p>
+                                                          
+                                                         <br>
+                                                         <div class="wrap" id="wrap">
+                                                             <p class="block" contenteditable="true" id="main-skill">Enter Skill</p>
+                                                         </div>   
+                                                     </div>
+                                
+                                                     <div class="skill tgl" id="SOFT_SKILLS">
+                                                         
+                                                        <p class="title" contenteditable="true" placeholder="SOFT SKILLS">SOFT SKILLS</p>
+                                                         
+                                                        <br>
+                                                        <div class="wrap" id="wrap">
+                                                            <p class="block" contenteditable="true"id="main-skill">Enter Skill</p>
+                                                        </div>   
+                                                    </div>
+                                
+                                                    <div class="skill tgl" id="HOBBIES">
+                                                        <p class="title" contenteditable="true" placeholder="HOBBIES">HOBBIES</p>
+                                                         
+                                                        <br>
+                                                        <div class="wrap" id="wrap">
+                                                            <p class="block" contenteditable="true" id="main-skill">Enter Hobby</p>
+                                                           
+                                                        </div>   
+                                                    </div>
+                                
+                                                    <div class="skill tgl" id="LANGUAGES">
+                                                        <p class="title" contenteditable="true" placeholder="LANGUAGES">LANGUAGES</p>
+                                                         
+                                                        <br>
+                                                        <div class="wrap" id="wrap">
+                                                            <p class="block" contenteditable="true" id="main-skill">Enter Language</p>
+                                                            
+                                                        </div>   
+                                                    </div>
+                                
+                                                    <div class="skill tgl" id="CERTIFICATIONS">
+                                                        <p class="title" contenteditable="true" placeholder="CERTIFICATIONS">CERTIFICATIONS</p>
+                                                         
+                                                        <br>
+                                                        <div class="wrap" id="wrap">
+                                                            <p class="block" contenteditable="true" id="main-skill">Enter Certifications</p>
+                                                            
+                                                        </div>   
+                                                    </div>
+                                     
+                                                 </div>
+                                     
+                                                    <div id="right">
+                                                      <!-- work experice area -->
+                                                        <div id="work-experience" class="tgl">
+                                                         <p class="title" contenteditable="true" placeholder="WORK EXPERIENCE">WORK EXPERIENCE</p>
+                                                          
+                                                          <!-- work experience block -->
+                                                    
+                                                            <ul style="list-style-type: none;padding: 0;">
+                                                                <li>
+                                                                    <div class="experience-block">
+                                                                     <p class="title" contenteditable="true" placeholder="POSITION"></p>
+                                                                     <p class="right" contenteditable="true" placeholder="From-Until"></p>
+                                                                       <div class="experience">
+                                                                        <p class="" contenteditable="true" placeholder="EMPLOYER"></p>
+                                                                       </div>
+                                                                       <p class="content exp" contenteditable="true" placeholder="Elaborate Your Work-[Enter space to keep it black]"></p>
+                                                                    </div> 
+                                                                </li>
+                                
+                                                                
+                                                            </ul>
+                                
+                                
+                                                            <!-- /work experience block -->
+                                                        </div>
+                                                         <!-- /work experice area -->
+                                     
+                                                     <!-- PROJECTS AREA -->
+                                                        <div id="project" class="tgl">
+                                                             <p class="title" contenteditable="true" placeholder="PROJECTS">PROJECTS</p>
+                                                              
+                                                             <!-- PROJECT BLOCK -->
+                                                             <ul style="list-style-type: none;padding: 0;">
+                                                                <li>
+                                                                    <div class="experience-block">
+                                                                        <p class="title" contenteditable="true" placeholder="PROJECT NAME"></p>
+                                                                        <p class="right" contenteditable="true" placeholder="From-Until"></p>
+                                                                           <div class="experience">
+                                                                            <p class="" contenteditable="true" placeholder="TECH USED"></p>
+                                                                           </div>
+                                                                           <p class="content exp" contenteditable="true" placeholder="Explain about your project-[Enter space to keep it black]"></p>
+                                                                    </div> 
+                                
+                                                                </li>
+                                                            </ul>
+                                                              <!-- /PROJECT BLOCK -->
+                                                        </div>
+                                                    <!-- /PROJECTS AREA -->
+                                                     
+                                                    <!-- EDUCATION -->
+                                                     <div id="education" class="tgl">
+                                                        <p class="title" contenteditable="true" placeholder="EDUCATION">EDUCATION</p>
+                                                         
+                                                         <!-- work experience block -->
+                                                   
+                                                           <ul style="list-style-type: none;padding: 0;">
+                                                               <li>
+                                                                   <div class="experience-block">
+                                                                    <p class="title" contenteditable="true" placeholder="SCHOOL NAME"></p>
+                                                                    <p class="right" contenteditable="true" placeholder="From-Until"></p>
+                                                                      <div class="experience">
+                                                                       <p class="" contenteditable="true" placeholder="GPA"></p>
+                                                                      </div>
+                                                                      <p class="content exp" contenteditable="true" placeholder="Write about achievements or titles you held-[Enter space to keep it black]"></p>
+                                                                   </div> 
+                                                               </li>
+                                
+                                                               
+                                                           </ul>
+                                
+                                
+                                                           <!-- /work experience block -->
+                                                       </div>
+                                
+                                                    <!-- /EDUCATION -->
+                                 
+                                     
+                                                    </div>
+                                             
+                                                </div>
+                                     
+                                            </div> 
+                        </div>
+                    <!-- ----------------------------------------------------------------RESUME PAGE END-------------------------------------------------->
+                    
+                  </div>
+
+                <footer class = "footer" style="width: 101.37%;">
+                    <div class="container1">
+                        <div class = "footer-content">
+                            <p class="fs-15">&copy;Copyright 2022. All Rights Reserved - <span>ACERESUME.</span></p>
+                        </div>
+                    </div>
+                </footer>
+
+               </div>  
+         
+               <!-- PDF CONTENT END -->
+            </page>
+        </div>
+    </div>
+    
+    <div class="responsive-message"></div>
+     
+    <script src="./ASSETS/JS/resume_page.js"></script>   
+
+
+    <style>
+        .pdf-page {
+            font-family: "DejaVu Sans", "Arial", sans-serif;
+        }
+    </style>
+    <script>
+        kendo.pdf.defineFont({
+            "DejaVu Sans"             : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf",
+            "DejaVu Sans|Bold"        : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Bold.ttf",
+            "DejaVu Sans|Bold|Italic" : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf",
+            "DejaVu Sans|Italic"      : "https://kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans-Oblique.ttf"
+        });
+    </script>
+    <script>
+      function getPDF(selector) {
+        kendo.drawing.drawDOM($(selector)).then(function(group){
+          kendo.drawing.pdf.saveAs(group, 'ACERESUME.pdf');
+        });
+      }
+    </script>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+          font-family: 'Montserrat', sans-serif;
+    }
+    page[size="A4"] {  
+      width: 790px;
+      height: 1000px; 
+    }
+    page {
+      background: white; 
+      display: inline-block;
+      margin: 0;
+    }
+</style>
+
+    </div>
+
+<script type="text/javascript">
+       $('#pdf-generate').click(function(){
+         getPDF('.container');
+       })
+</script>
+
+
+<script>
+    let profilepic=document.getElementById("profilepic");
+    let inputfile=document.getElementById("input-file");
+
+    inputfile.onchange=function(){
+        profilepic.src=URL.createObjectURL(inputfile.files[0]);
+    }
+</script>
+  
+</body>
+</html>
+
+
+
